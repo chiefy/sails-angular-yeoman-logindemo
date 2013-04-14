@@ -23,13 +23,11 @@ var UserController = {
 				});
 			};
 
-			bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
+			bcrypt.hash(req.param('password'),SALT_WORK_FACTOR,function(err, hash){
 				if(err) throw err;
-				bcrypt.hash(req.param('password'),salt,function(err, hash){
-					if(err) throw err;
-					createUser(hash);
-				});
+				createUser(hash);
 			});
+
 		} catch(e) {
 			return res.json({ error : e.message },500);
 		}

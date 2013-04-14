@@ -1,7 +1,7 @@
 angular.module('loginDemoApp.services')
 	.factory('SessionService',['$resource', function($resource){
 
-		var service = $resource('/sessions/:param',{},{
+		var service = $resource('/session/:param',{},{
 			'login': {
 				method: 'POST'
 			},
@@ -24,8 +24,8 @@ angular.module('loginDemoApp.services')
 			service.login(
 				newUser,
 				function(res){
-					user = (res.user || {});
-					user.authorized = res.authorized;
+					_user = (res.user || {});
+					_user.authorized = res.authorized;
 					if(angular.isFunction(resultHandler)) {
 						resultHandler(res);
 					}

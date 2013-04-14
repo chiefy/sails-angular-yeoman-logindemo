@@ -9,6 +9,10 @@ angular.module('loginDemoApp', ['loginDemoApp.services'])
     $locationProvider.html5Mode(true);
 
     $routeProvider
+      .when('/widgets',{
+        templateUrl: 'views/widgets.html',
+        controller: 'WidgetCtrl'
+      })
       .when('/login',{
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'

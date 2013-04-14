@@ -19,11 +19,11 @@ var loginCtrl = angular.module('loginDemoApp')
     	}
 
     	function errorHandler(err) {
-    		$scope.message = "Error! " + err;
+        	$scope.message = "Error! " + err;
     	}
 
     	$scope.showMessage = function() {
-    		return $scope.message && scope.message.length();
+    		return $scope.message && $scope.message.length;
     	}
 
   }]);

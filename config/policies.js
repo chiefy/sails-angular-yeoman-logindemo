@@ -5,7 +5,16 @@
 */
 module.exports.policies = {
 
-	'*': true
+	'*': true,
+
+	userController: {
+		'*' : 'authenticated'
+	},
+	
+	sessionController : {
+		'*' : true
+	}
+
 	/** Example mapping: 
 	someController: {
 
