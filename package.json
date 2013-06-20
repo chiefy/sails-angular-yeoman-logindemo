@@ -4,8 +4,9 @@
   "dependencies": {
     "sails": "0.8.9",
     "mongoose": "~3.6.4",
-    "sails-mongo": "0.0.2",
-    "bcrypt": "~0.7.5"
+    "sails-mongo": "latest",
+    "bcrypt": "~0.7.5",
+    "express": "latest"
   },
   "scripts": {
     "start": "node app.js",

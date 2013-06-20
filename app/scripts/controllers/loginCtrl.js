@@ -12,18 +12,14 @@ var loginCtrl = angular.module('loginDemoApp')
 
     	function loginHandler(res) {
     		if(SessionService.authorized()) {
-    			console.log("Authorized!");
+    			$location.path('/authorized');
     		} else {
     			$scope.message = "Invalid username or password!";
     		}
     	}
 
     	function errorHandler(err) {
-        	$scope.message = "Error! " + err;
-    	}
-
-    	$scope.showMessage = function() {
-    		return $scope.message && $scope.message.length;
+        	$scope.message = "Error! " + err.data.error;
     	}
 
   }]);

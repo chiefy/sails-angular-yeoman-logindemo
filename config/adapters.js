@@ -9,7 +9,7 @@ module.exports.adapters = {
 
 	mongo: {
 		module: 'sails-mongo',
-		url: 'mongodb://gavin:27017/login_demo'
+		url: 'mongodb://login_user:l0g1n@ds031328.mongolab.com:31328/login_demo'
 	},
 	
 	// In-memory adapter for DEVELOPMENT ONLY
@@ -28,15 +28,6 @@ module.exports.adapters = {
 		module: 'sails-dirty',
 		filePath: './.tmp/dirty.db',
 		inMemory: false
-	},
-
-	// MySQL is the world's most popular relational database.
-	// Learn more: http://en.wikipedia.org/wiki/MySQL
-	mysql: {
-		module		: 'sails-mysql',
-		host		: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
-		user		: 'YOUR_MYSQL_USER',
-		password	: 'YOUR_MYSQL_PASSWORD',
-		database	: 'YOUR_MYSQL_DB'
 	}
+
 };

@@ -19,9 +19,11 @@ var SessionController = {
 			if(!user || !bcrypt.compareSync(req.param('password'),user.password)) {
 				return res.json({ authorized: false });
 			} 
+			// @todo strip password from user object
 			return res.json({ authorized: true, user: user });
 		});
 	},
+	
 	logout: function(req,res) {
 
 	}

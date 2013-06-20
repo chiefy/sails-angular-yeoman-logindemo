@@ -1,28 +1,30 @@
 <form id="login-form" ng-submit="login()" name="loginForm">
   <fieldset>
     <legend>Login</legend>
-    <p class="error-message" ng-show="showMessage(message)">{{message}}</p>
+    <p class="error" ng-show="message">{{message}}</p>
     <label>
       <span>Username*</span>
       <input
         type="text"
+        name="userName"
         ng-model="user.email"
         required
         autofocus
         />
-      <span class="error" ng-show="myForm.list.$error.REQUIRED">Required!</span>
+      <span class="error" ng-show="userName.$error.invalid">Required!</span>
     </label>
     <label>
       <span>Password*</span>
       <input
         type="password"
+        name="userPassword"
         ng-model="user.password"
         required
         />
+        <span class="error" ng-show="userPassword.$error.invalid">Required!</span>
     </label>
-
     <button type="submit" class="main-button" ng-disabled="{{loginForm.$invalid}}">Login</button>
-    <p class="info">Username: "Dante" Password: "Hicks"</p>
+    <p class="info">Username: "Dante" Password: "notevensupposedtobeheretoday"</p>
 
   </fieldset>
 </form>

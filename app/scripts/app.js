@@ -17,6 +17,10 @@ angular.module('loginDemoApp', ['loginDemoApp.services'])
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
       })
+      .when('/authorized',{
+        templateUrl: 'views/authorized.html',
+        controlller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/login'
       });
