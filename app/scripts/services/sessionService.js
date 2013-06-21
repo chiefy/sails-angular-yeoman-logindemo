@@ -12,9 +12,9 @@ angular.module('loginDemoApp.services')
 				method: 'DELETE'
 			}
 		}),
-			_user = {
-				authorized: false
-			};
+		_user = {
+			authorized: false
+		};
 
 		function getUser() {
 			return _user;

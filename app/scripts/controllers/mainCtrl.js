@@ -5,11 +5,7 @@ angular.module('loginDemoApp')
   	function ($scope,$location,SessionService) {
     	
     	$scope.user = SessionService.getUser();
-    	
-        // Redirect unauthorized users
-        if(!$scope.user.authorized) {
-            $location.path('/login');
-        }
+    	$scope.authorized = SessionService.authorized;
 
     	$scope.logout = function() {
     		SessionService.logout(logoutHandler,errorHandler);
